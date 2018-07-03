@@ -1,15 +1,9 @@
 cabal-version: 1.18
 name: haskal
 version: 0.1.0.0
-license: BSD3
-license-file: LICENSE
 copyright: Copyright: (c) 2018 Vanessa McHale
 maintainer: vanessa.mchale@iohk.io
 author: Vanessa McHale
-synopsis: How to write Haskal good
-description:
-    Example of how to write Haskal good
-category: Haskal
 build-type: Simple
 extra-source-files:
     src/macros.h
