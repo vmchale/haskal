@@ -1,8 +1,6 @@
 cabal-version: 1.18
 name: haskal
 version: 0.1.0.0
-copyright: Copyright: (c) 2018 Vanessa McHale
-maintainer: vanessa.mchale@iohk.io
 author: Vanessa McHale
 build-type: Simple
 extra-source-files:
