@@ -8,12 +8,12 @@ maintainer: vanessa.mchale@iohk.io
 author: Vanessa McHale
 synopsis: How to write Haskal good
 description:
-    Examples of how to write Haskal good
+    Example of how to write Haskal good
 category: Haskal
 build-type: Simple
 extra-source-files:
-  src/macros.h
-  cabal.project.local
+    src/macros.h
+    cabal.project.local
 extra-doc-files: README.md
 
 flag development
@@ -27,6 +27,7 @@ executable haskal
     build-tools: cpphs -any
     hs-source-dirs: src
     default-language: Haskell98
+    ghc-options: -Wall
     build-depends:
         base <5
     
