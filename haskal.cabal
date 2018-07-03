@@ -1,0 +1,41 @@
+cabal-version: 1.18
+name: haskal
+version: 0.1.0.0
+license: BSD3
+license-file: LICENSE
+copyright: Copyright: (c) 2018 Vanessa McHale
+maintainer: vanessa.mchale@iohk.io
+author: Vanessa McHale
+synopsis: How to write Haskal good
+description:
+    Examples of how to write Haskal good
+category: Haskal
+build-type: Simple
+extra-source-files:
+  src/macros.h
+  cabal.project.local
+extra-doc-files: README.md
+
+flag development
+    description:
+        Enable `-Werror`
+    default: False
+    manual: True
+
+executable haskal
+    main-is: Haskal.hs
+    build-tools: cpphs -any
+    hs-source-dirs: src
+    default-language: Haskell98
+    build-depends:
+        base <5
+    
+    if flag(development)
+        ghc-options: -Werror
+    
+    if impl(ghc >=8.0)
+        ghc-options: -Wincomplete-uni-patterns -Wincomplete-record-updates
+                     -Wredundant-constraints -Wnoncanonical-monad-instances
+    
+    if impl(ghc >=8.4)
+        ghc-options: -Wmissing-export-lists
